@@ -26,10 +26,10 @@ body {
   background:
     linear-gradient(
       -45deg,
-      rgba(255, 0, 0, 0.4),
-      rgb(255, 0, 0),
-      rgb(68, 68, 68),
-      rgba(11, 77, 153, 0.5)
+      rgba(128, 0, 128, 0.5),
+      rgb(75, 0, 130),
+      rgb(45, 20, 65),
+      rgba(180, 80, 220, 0.5)
     );
   background-size: 400% 400%;
   animation: photosPageAurora 5s ease infinite;
@@ -42,13 +42,14 @@ body {
   inset: 0;
   pointer-events: none;
 
-  background: linear-gradient(
-    45deg,
-    rgba(34, 139, 230, 0.35),
-    rgba(0, 255, 180, 0.22),
-    rgba(34, 139, 230, 0.28),
-    rgba(23, 32, 42, 0.55)
-  );
+  background:
+    linear-gradient(
+      -45deg,
+      rgba(128, 0, 128, 0.5),
+      rgb(75, 0, 130),
+      rgb(45, 20, 65),
+      rgba(180, 80, 220, 0.5)
+    );
   background-size: 400% 400%;
   animation: photosPageMove 4.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
 
