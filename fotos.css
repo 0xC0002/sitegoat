@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 80px 24px 60px;
   font-family: "Gowun Dodum", sans-serif;
+<<<<<<< HEAD
   color: #fff;
   background: linear-gradient(
     -45deg,
@@ -21,6 +22,18 @@ body {
     rgb(45, 20, 65),
     rgba(180, 80, 220, 0.5)
   );
+=======
+  color: var(--photos-page-white);
+
+  background:
+    linear-gradient(
+      -45deg,
+      rgba(128, 0, 128, 0.5),
+      rgb(75, 0, 130),
+      rgb(45, 20, 65),
+      rgba(180, 80, 220, 0.5)
+    );
+>>>>>>> ab65628fb382ed73e667be3a7668cfc6d008cdf2
   background-size: 400% 400%;
   animation: photosAurora 5s ease infinite;
   overflow-x: hidden;
@@ -30,6 +43,7 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
+<<<<<<< HEAD
   background: linear-gradient(
     45deg,
     rgba(180, 80, 255, 0.35),
@@ -37,6 +51,17 @@ body {
     rgba(220, 100, 255, 0.35),
     rgba(40, 10, 60, 0.5)
   );
+=======
+
+  background:
+    linear-gradient(
+      -45deg,
+      rgba(128, 0, 128, 0.5),
+      rgb(75, 0, 130),
+      rgb(45, 20, 65),
+      rgba(180, 80, 220, 0.5)
+    );
+>>>>>>> ab65628fb382ed73e667be3a7668cfc6d008cdf2
   background-size: 400% 400%;
   animation: photosAuroraMove 4.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
   z-index: -1;

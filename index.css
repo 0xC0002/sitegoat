@@ -31,7 +31,11 @@ body {
     rgba(180, 80, 255, 0.35),
     rgba(100, 0, 180, 0.35),
     rgba(220, 100, 255, 0.35),
-    rgba(40, 10, 60, 0.5)
+    rgba(40, 10, 60, 0.5) -45deg,
+    rgba(128, 0, 128, 0.5),
+    rgb(75, 0, 130),
+    rgb(45, 20, 65),
+    rgba(180, 80, 220, 0.5)
   );
   background-size: 400% 400%;
   animation: auroraMove 4.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
