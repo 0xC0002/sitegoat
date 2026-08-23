@@ -1,11 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Gowun+Dodum&family=Heebo:wght@100..900&display=swap');
-
-:root {
-  --photos-page-gold: #f5deb3;
-  --photos-page-white: #ffffff;
-  --photos-page-glass: rgba(255, 255, 255, 0.08);
-  --photos-page-border: rgba(255, 255, 255, 0.22);
-}
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Gowun+Dodum&family=Heebo:wght@100..900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -19,21 +12,17 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 80px 24px 60px;
-
   font-family: "Gowun Dodum", sans-serif;
-  color: var(--photos-page-white);
-
-  background:
-    linear-gradient(
-      -45deg,
-      rgba(255, 0, 0, 0.4),
-      rgb(255, 0, 0),
-      rgb(68, 68, 68),
-      rgba(11, 77, 153, 0.5)
-    );
+  color: #fff;
+  background: linear-gradient(
+    -45deg,
+    rgba(128, 0, 128, 0.5),
+    rgb(75, 0, 130),
+    rgb(45, 20, 65),
+    rgba(180, 80, 220, 0.5)
+  );
   background-size: 400% 400%;
-  animation: photosPageAurora 5s ease infinite;
-
+  animation: photosAurora 5s ease infinite;
   overflow-x: hidden;
 }
 
@@ -41,42 +30,40 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-
   background: linear-gradient(
     45deg,
-    rgba(34, 139, 230, 0.35),
-    rgba(0, 255, 180, 0.22),
-    rgba(34, 139, 230, 0.28),
-    rgba(23, 32, 42, 0.55)
+    rgba(180, 80, 255, 0.35),
+    rgba(100, 0, 180, 0.35),
+    rgba(220, 100, 255, 0.35),
+    rgba(40, 10, 60, 0.5)
   );
   background-size: 400% 400%;
-  animation: photosPageMove 4.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
-
+  animation: photosAuroraMove 4.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
   z-index: -1;
 }
 
-.photos-page-aurora::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle,
-    rgba(236, 235, 235, 0.05),
-    rgba(47, 184, 20, 0.05)
-  );
-  mix-blend-mode: overlay;
+@keyframes photosAurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-@keyframes photosPageAurora {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes photosPageMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+@keyframes photosAuroraMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .photos-page-back {
@@ -84,20 +71,18 @@ body {
   top: 20px;
   left: 20px;
   z-index: 10;
-
   padding: 10px 16px;
-  border: 1px solid var(--photos-page-border);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 999px;
-
   color: #fff;
-  background: rgba(20, 20, 20, 0.35);
+  background: rgba(35, 10, 55, 0.35);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
   text-decoration: none;
   font-size: 14px;
-
-  transition: transform 0.25s ease, background 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
 }
 
 .photos-page-back:hover {
@@ -114,24 +99,19 @@ body {
   width: min(720px, 100%);
   margin: 0 auto 42px;
   padding: 30px;
-
   text-align: center;
-
   background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--photos-page-border);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 24px;
-
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
 }
 
 .photos-page-kicker {
   display: block;
   margin-bottom: 8px;
-
-  color: var(--photos-page-gold);
+  color: #f5deb3;
   font-family: "Fira Code", monospace;
   font-size: 12px;
   letter-spacing: 2px;
@@ -148,7 +128,6 @@ body {
 .photos-page-header p {
   margin: 12px auto 0;
   max-width: 560px;
-
   color: rgba(255, 255, 255, 0.82);
   font-size: 17px;
   line-height: 1.6;
@@ -158,14 +137,8 @@ body {
   width: 60%;
   height: 3px;
   margin: 24px auto 0;
-
   border: 0;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--photos-page-gold),
-    transparent
-  );
+  background: linear-gradient(to right, transparent, #f5deb3, transparent);
 }
 
 .photos-grid {
@@ -176,17 +149,15 @@ body {
 
 .photos-card {
   overflow: hidden;
-
   background: rgba(255, 255, 255, 0.07);
-  border: 1px solid var(--photos-page-border);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 20px;
-
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .photos-card:hover {
@@ -205,12 +176,10 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   border: 0;
   border-radius: 0;
   margin: 0;
-
   transition: transform 0.45s ease;
 }
 
@@ -244,18 +213,15 @@ body {
   body {
     padding: 70px 14px 40px;
   }
-
   .photos-page-back {
     top: 12px;
     left: 12px;
     padding: 9px 12px;
   }
-
   .photos-page-header {
     padding: 24px 18px;
     margin-bottom: 24px;
   }
-
   .photos-grid {
     grid-template-columns: 1fr;
     gap: 18px;

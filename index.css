@@ -4,16 +4,16 @@ body {
   font-family: "Gowun Dodum", sans-serif;
   background: linear-gradient(
     -45deg,
-    rgba(255, 0, 0, 0.4),
-    rgb(255, 0, 0),
-    rgb(68, 68, 68),
-    rgba(11, 77, 153, 0.5)
+    rgba(128, 0, 128, 0.5),
+    rgb(75, 0, 130),
+    rgb(45, 20, 65),
+    rgba(180, 80, 220, 0.5)
   );
   background-size: 400% 400%;
   animation: auroraAnimation 5s ease infinite;
   display: flex;
   justify-content: center;
-  overflow: auto; /* Permite a rolagem da página */
+  overflow: auto;
   flex-direction: column;
   align-items: stretch;
   gap: 50px;
@@ -28,10 +28,10 @@ body {
   height: 100%;
   background: linear-gradient(
     45deg,
-    rgba(34, 139, 230, 0.4),
-    rgba(0, 255, 180, 0.4),
-    rgba(34, 139, 230, 0.4),
-    rgba(23, 32, 42, 0.5)
+    rgba(180, 80, 255, 0.35),
+    rgba(100, 0, 180, 0.35),
+    rgba(220, 100, 255, 0.35),
+    rgba(40, 10, 60, 0.5)
   );
   background-size: 400% 400%;
   animation: auroraMove 4.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
@@ -80,12 +80,10 @@ img {
   transition: all 0.8s ease-out;
 }
 
-/* Quando estiver visível */
 .section.visible {
   opacity: 1;
-  transform: translateY(0); /* Retorna à posição original */
+  transform: translateY(0);
 }
-
 .section-bruno {
   .section-bruno {
     background: linear-gradient(135deg, #000000, #000000);
@@ -104,14 +102,12 @@ img {
   padding: 25px;
   text-align: center;
 }
-
 h1 {
   text-decoration: none;
   position: relative;
   text-align: center;
   margin-top: 0px;
 }
-
 h2 {
   font-size: 18px;
   color: #f5deb3;
@@ -132,7 +128,6 @@ h2 {
   margin: 20px auto;
   width: 60%;
 }
-
 .glass {
   background: rgba(2228, 98, 241, -1000);
   backdrop-filter: blur(1px);
@@ -148,7 +143,6 @@ h2 {
   transform: translateY(20px);
   animation: fadeIn 1s ease-in-out forwards;
 }
-
 .glass2 {
   background: rgba(2228, 98, 241, -1000); /* Fundo translúcido */
   backdrop-filter: blur(1px);
@@ -161,12 +155,10 @@ h2 {
   z-index: 1;
   position: relative;
 }
-
 /* linha bruno */
 .glass2 .linha {
   background: linear-gradient(to right, transparent, #ffffff, transparent);
 }
-
 .glass2 .quote {
   font-style: italic;
   font-size: 1rem;
@@ -264,7 +256,6 @@ h3 {
   display: inline-block;
   margin: 20px;
 }
-
 .foto {
   width: 120px;
   height: 120px;
@@ -293,11 +284,10 @@ h3 {
   color: #333; /* Cor do texto */
   font-family: "Gowun Dodum", sans-serif; /* Fonte personalizada */
 }
-/* Rabinho do balão */
 .thought-balloon::after {
   content: "";
   position: absolute;
-  bottom: 35px; /* Abaixo do balão */
+  bottom: 35px;
   left: -10%;
   width: 20px;
   height: 20px;
@@ -328,16 +318,12 @@ h3 {
   color: #fff;
 }
 
-
-/* =========================================================
-   BOTÃO DA GALERIA — adição isolada, não interfere no layout atual
-   ========================================================= */
+/* Botão "nossas fotos" */
 .photos-nav-button {
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 9999;
-
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -345,31 +331,28 @@ h3 {
   padding: 10px 16px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 999px;
-
   color: #fff;
-  background: rgba(20, 20, 20, 0.35);
+  background: rgba(35, 10, 55, 0.35);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
   font-family: "Gowun Dodum", sans-serif;
   font-size: 14px;
   text-decoration: none;
-
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
-
 .photos-nav-button span {
   font-size: 18px;
   line-height: 1;
 }
-
 .photos-nav-button:hover {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.16);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
-
 @media (max-width: 600px) {
   .photos-nav-button {
     top: 12px;
