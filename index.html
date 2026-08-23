@@ -60,6 +60,14 @@
         </main>
     </div>
         <script src="index.js"></script>
-<audio id="site-music-audio" src="./legendary.mp3" controls autoplay preload="auto"></audio>
+<audio id="site-music-audio" src="./legendary.mp3" controls autoplay preload="auto">
+</audio>
+<script>
+    document.addEventListener("click", function () {
+        const audio = document.getElementById("site-music-audio");
+
+        audio.play().catch(function () { });
+    }, { once: true });
+</script>
 </body>
 </html>
