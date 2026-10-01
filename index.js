@@ -93,4 +93,50 @@ dots.forEach((dot) => {
   dot.addEventListener("click", () => document.getElementById(dot.dataset.target)?.scrollIntoView({ behavior: "smooth" }));
 });
 
-updateMusic();
+function formatTime(seconds) {
+  if (!Number.isFinite(seconds)) return "00:00";
+  return `${String(Math.floor(seconds / 60)).padStart(2, "0")}:${String(Math.floor(seconds % 60)).padStart(2, "0")}`;
+}
+
+function updateMusic() {
+  if (!audio) return;
+  timeLabel.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+  progress.value = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+  playButton.textContent = audio.paused ? "▶" : "Ⅱ";
+}
+
+if (audio && playButton && progress && volumeButton && timeLabel) {
+  playButton.addEventListener("click", async () => {
+    if (audio.paused) {
+      try { await audio.play(); } catch (_) {}
+    } else {
+      audio.pause();
+    }
+    updateMusic();
+  });
+
+  audio.addEventListener("loadedmetadata", updateMusic);
+  audio.addEventListener("timeupdate", updateMusic);
+  audio.addEventListener("play", updateMusic);
+  audio.addEventListener("pause", updateMusic);
+  audio.addEventListener("ended", updateMusic);
+
+  progress.addEventListener("input", () => {
+    if (audio.duration) {
+      audio.currentTime = Number(progress.value) / 100 * audio.duration;
+    }
+  });
+
+  volumeButton.addEventListener("click", () => {
+    audio.muted = !audio.muted;
+    volumeButton.textContent = audio.muted ? "×" : "♪";
+  });
+
+  // O navegador pode bloquear autoplay com som.
+  // Depois do primeiro toque/clique do usuário, tentamos iniciar a música.
+  document.addEventListener("pointerdown", () => {
+    if (audio.paused) audio.play().catch(() => {});
+  }, { once: true });
+
+  updateMusic();
+}
