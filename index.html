@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3a1759">
+  <meta property="og:title" content="yin e yang">
+  <meta property="og:type" content="website">
+  <title>yin e yang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Gowun+Dodum&family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div id="hearts" class="hearts-container" aria-hidden="true"></div>
+
+  <nav class="topbar" aria-label="Navegação">
+    <span class="brand">☯ yin &amp; yang</span>
+  </nav>
+
+  <div class="progress" aria-hidden="true">
+    <button class="progress-dot active" data-target="section-ste" aria-label="Ir para ela"></button>
+    <button class="progress-dot" data-target="section-bruno" aria-label="Ir para Bruno"></button>
+  </div>
+
+  <main>
+    <section id="section-ste" class="chapter chapter-ste">
+      <div class="chapter-inner">
+        <article class="person-card">
+          <div class="portrait-wrap" id="ste-portrait-wrap">
+            <button class="portrait-button" id="thought-trigger" type="button" aria-label="Mostrar pensamento dela">
+              <img src="./ela.jpg" alt="Foto dela" class="portrait">
+            </button>
+            <span class="portrait-ring" aria-hidden="true"></span>
+            <div class="thought-balloon" id="ste-thought" role="status" aria-hidden="true">
+              <span>gente o bruninho é taaaao lindo</span>
+            </div>
+          </div>
+
+          <div class="person-heading">
+            <p class="eyebrow">a mais mais</p>
+            <h1>menos trap que eu</h1>
+            <div class="divider"></div>
+          </div>
+
+          <div class="about-card">
+            <p>Eu falei que ia lançar um site e voce nao acreditou.. <strong>EU SEMPRE FAÇO O QUE FALO</strong> (eu sou trap)</p>
+            <p>Botei em pratica o meu modelo de site, voce vai estrear.. O que eu quero saber de vdd é quando a Elaine <button class="spoiler-click" type="button">(minha sogra)</button> vai me emprestar voce de segunda a sexta, como eu sou bem gentil eu deixo ela ficar com você nos sabados e domingo..</p>
+          </div>
+
+          <div class="quotes" aria-label="Frases">
+            <blockquote>“numkidito”</blockquote>
+            <blockquote>“negra empoderada”</blockquote>
+          </div>
+        </article>
+
+        <div class="scroll-cue" aria-hidden="true">
+          <span>desce aí</span>
+          <i>↓</i>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-bruno" class="chapter chapter-bruno">
+      <div class="chapter-inner">
+        <article class="person-card">
+          <div class="portrait-wrap" id="bruno-portrait-wrap">
+            <button class="portrait-button" id="thought-trigger-bruno" type="button" aria-label="Mostrar pensamento do Bruno">
+              <img src="./bruno.jpg" alt="Foto do Bruno" class="portrait">
+            </button>
+            <span class="portrait-ring" aria-hidden="true"></span>
+            <div class="thought-balloon" id="bruno-thought" role="status" aria-hidden="true">
+              <span>a ste e tao lindaaaa</span>
+            </div>
+          </div>
+
+          <div class="person-heading">
+            <p class="eyebrow">the goat</p>
+            <h2>o unico goat e o real trap de benfica</h2>
+            <div class="divider"></div>
+          </div>
+
+          <div class="about-card">
+            <p>Não tem muito o que falar sobre mim, né.. Eu já sou o the goat e incrível, quer mais o que?</p>
+          </div>
+
+          <div class="quotes" aria-label="Frases">
+            <blockquote>“droga, é o bruno”</blockquote>
+            <blockquote>“ISSO É TRAP MIXTAPE 🔥”</blockquote>
+          </div>
+        </article>
+
+        <a href="fotos.html" class="final-link">ver nossas fotos <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+
+  <div class="music-player" id="music-player">
+    <audio id="site-music-audio" src="./legendary.mp3" preload="metadata"></audio>
+    <button id="music-toggle" class="music-button" type="button" aria-label="Tocar música">▶</button>
+    <div class="music-info">
+      <span class="music-title">legendary.mp3</span>
+      <span id="music-time">00:00 / 00:00</span>
+    </div>
+    <input id="music-progress" class="music-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Progresso da música">
+    <button id="music-volume" class="music-volume" type="button" aria-label="Silenciar música">♪</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

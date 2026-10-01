@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3a1759">
+  <title>nossas fotos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Gowun+Dodum&family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fotos.css">
+</head>
+<body>
+  <div class="photos-page-aurora" aria-hidden="true"></div>
+  <div class="photos-noise" aria-hidden="true"></div>
+
+  <a href="index.html" class="photos-page-back">← voltar</a>
+
+  <main class="photos-page-content">
+    <header class="photos-page-header">
+      <span class="photos-page-kicker">places</span>
+      <h1>nossas pictures lindas e fotogenicas</h1>
+      <p>isso aqui ja vai ser nosso album de fotos pra quando o bozonacio ver, ele lembrar que vivemos mt</p>
+      <hr>
+    </header>
+
+    <section class="photos-grid" aria-label="Galeria de fotos">
+      <article class="photos-card"><div class="photos-image-wrap"><img src="1.jpeg" alt="Nossa foto 1" loading="lazy"></div><div class="photos-card-info"><h2>jogo do brasil</h2><p>alguns dias antes da tragedia acontecer</p></div></article>
+      <article class="photos-card"><div class="photos-image-wrap"><img src="2.jpeg" alt="Nossa foto 2" loading="lazy"></div><div class="photos-card-info"><h2>jogo do brasil 2 👀</h2><p>dnv pq eu gosto dessa foto</p></div></article>
+      <article class="photos-card"><div class="photos-image-wrap"><img src="3.jpeg" alt="Nossa foto 3" loading="lazy"></div><div class="photos-card-info"><h2>paquetá 😛😛</h2><p>pedalei esse dia foi daora, nao vai demorar muito pra eu voltar la e arrombar o cadeado do farol</p></div></article>
+      <article class="photos-card"><div class="photos-image-wrap"><img src="4.jpg" alt="Nossa foto 4" loading="lazy"></div><div class="photos-card-info"><h2>derrota do brasil 😃😛</h2><p>esse foi o dia que o brasil perdeu 🏴 mas pelo menos eu comprei meu oculos e tirei essa foto iconica</p></div></article>
+      <article class="photos-card"><div class="photos-image-wrap"><img src="5.jpeg" alt="Nossa foto 5" loading="lazy"></div><div class="photos-card-info"><h2>😛😛</h2><p>dia da derrota do brasil mas essa foto aq ta midia tb</p></div></article>
+      <article class="photos-card"><div class="photos-image-wrap"><img src="6.jpg" alt="Nossa foto 6" loading="lazy"></div><div class="photos-card-info"><h2>😠🖕</h2><p>😠🖕</p></div></article>
+      <article class="photos-card"><div class="photos-image-wrap"><img src="7.jpg" alt="Nossa foto 7" loading="lazy"></div><div class="photos-card-info"><h2>praia no inverno</h2><p>esse foi o dia em que decidimos inovar e ir inves de ir na praia no verao nos fomos no inverno, eu achei bem trap</p></div></article>
+      <article class="photos-card"><div class="photos-image-wrap"><img src="8.jpeg" alt="Nossa foto 8" loading="lazy"></div><div class="photos-card-info"><h2>☯️</h2><p>yin e yang</p></div></article>
+      <article class="photos-card"><div class="photos-image-wrap"><img src="9.jpg" alt="Nossa foto 9" loading="lazy"></div><div class="photos-card-info"><h2>ja falei pra voce apertar outra coisa</h2><p></p></div></article>
+    </section>
+  </main>
+
+  <div class="music-player" id="music-player">
+    <audio id="site-music-audio" src="./legendary.mp3" preload="metadata"></audio>
+    <button id="music-toggle" class="music-button" type="button" aria-label="Tocar música">▶</button>
+    <div class="music-info"><span class="music-title">legendary.mp3</span><span id="music-time">00:00 / 00:00</span></div>
+    <input id="music-progress" class="music-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Progresso da música">
+    <button id="music-volume" class="music-volume" type="button" aria-label="Silenciar música">♪</button>
+  </div>
+
+  <script src="fotos.js"></script>
+</body>
+</html>
